@@ -51,6 +51,6 @@ mp3.begin();
 mp3.volume(0x1F);
 mp3.set_mode(MP3::CYCLE);
 mp3.play_sd(0x0001);
-  delay(1000);
+  delay(10000);
   }
 }
