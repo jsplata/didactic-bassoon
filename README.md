@@ -46,7 +46,7 @@ void loop()
   distancia= int(0.017*tiempo); /*fórmula para calcular la distancia obteniendo un valor entero*/
   /*Monitorización en centímetros por el monitor serial*/
 if(distancia<30){
-  Serial.println("Mira mi huevo");
+  mp3.play_sd(0x0001);
   delay(1000);
   }
 }
