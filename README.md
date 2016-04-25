@@ -46,7 +46,11 @@ void loop()
   distancia= int(0.017*tiempo); /*fórmula para calcular la distancia obteniendo un valor entero*/
   /*Monitorización en centímetros por el monitor serial*/
 if(distancia<30){
-  mp3.play_sd(0x0001);
+mp3.begin(MP3_SOFTWARE_SERIAL);
+mp3.begin();
+mp3.volume(0x1F);
+mp3.set_mode(MP3::CYCLE);
+mp3.play_sd(0x0001);
   delay(1000);
   }
 }
